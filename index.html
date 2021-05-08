@@ -4,150 +4,258 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./public/stylesheets/styles.css"
+      type="text/css"
+    />
     <title>Linx - Tarefas a fazer</title>
   </head>
   <body>
     <header>
-      <h1>Tarefas a fazer</h1>
-      <h4>
-        Adicione e complete tarefas para organizar melhor a sua semana. :)
-      </h4>
+      <nav>
+        <h1>Tarefas a fazer</h1>
+        <h4>
+          Adicione e complete tarefas para organizar melhor a sua semana. :)
+        </h4>
+      </nav>
     </header>
     <main>
       <section class="taskFilter">
-        <input type="search" placeholder="Busque tarefas" />
-        <button type="submit" value="Buscar">Buscar</button>
-
-        <label for="filter">Organizar por:</label>
-        <select id="filter">
-          <option value="prazo">Prazo</option>
-          <option value="nome">Nome</option>
-        </select>
+        <div class="searchTask">
+          <input type="search" placeholder="Busque tarefas" />
+          <button type="submit" value="Buscar">Buscar</button>
+        </div>
+        <div class="filterTask">
+          <label for="filter">Organizar por:</label>
+          <select id="filter">
+            <option value="prazo">Prazo</option>
+            <option value="nome">Nome</option>
+          </select>
+        </div>
       </section>
 
       <section class="taskTable">
         <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
-        </div>
-        <div class="taskCard">
-          <h4>Prazo curto!</h4>
-          <img src="./assets/images/task.svg" alt="Tarefa" />
-          <h4>Nome da tarefa</h4>
-          <p>
-            Descrição da tarefa, o que deve ser feito e muitas informações que
-            explicam melhor do que se trata.
-          </p>
-          <h3>Prazo: 00/00</h3>
-          <small>Data de inclusão: há 2 semanas</small>
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
         </div>
 
-        <button>VER MAIS +</button>
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
+
+        <div class="taskCard">
+          <div>
+            <img src="./assets/images/task.svg" alt="Tarefa" />
+          </div>
+          <article>
+            <h4>Nome da tarefa</h4>
+            <p>
+              Descrição da tarefa, o que deve ser feito e muitas informações que
+              explicam melhor do que se trata.
+            </p>
+            <h3>Prazo: <span>00/00</span></h3>
+            <small>Data de inclusão: há 2 semanas</small>
+          </article>
+          <div class="extraButtons">
+            <button type="submit">Concluir</button>
+            <button type="submit">
+              <img src="./assets/images/Vector.svg" />Alterar prazo
+            </button>
+          </div>
+        </div>
       </section>
+
+      <button class="seeMore">VER MAIS +</button>
+
       <section class="newsletter">
         <h4>
           Quer receber dicas para organizar melhor a sua rotina? Cadastre-se!
         </h4>
-        <label for="nome">nome</label>
-        <input type="text" required />
-        <label for="email">e-mail</label>
-        <input type="email" required />
-        <button type="submit">Cadastrar</button>
+        <form action="">
+          <label for="nome"
+            >nome
+            <input
+              type="text"
+              id="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </label>
+          <label for="email"
+            >e-mail
+            <input type="email" placeholder="Digite seu e-mail" required />
+          </label>
+          <button type="submit">Cadastrar</button>
+        </form>
       </section>
 
       <section class="aboutLinx">
-        <img src="./assets/images/linxLogo.svg" alt="Linx Logo" />
-        <p>
-          A Linx é uma empresa brasileira especialista em tecnologia para o
-          varejo. Líder no mercado de software de gestão, com 45,6% de market
-          share do mercado varejista, conforme atesta o IDC.
-        </p>
-        <p>
-          Toda a expertise da Linx na jornada de compra é transformada em
-          insights fundamentais para atingir o que os varejistas mais esperam:
-          fidelizar seus consumidores e atingir resultados concretos e
-          relevantes.
-        </p>
-        <p>
-          Com capital aberto na B3 desde 2013, a Linx também se tornou a
-          primeira empresa brasileira de software com capital aberto na NYSE, em
-          2019. A empresa possui mais de 3,5 mil colaboradores distribuídos
-          entre sua sede em São Paulo, 15 filiais pelo Brasil e 5 países da
-          América. Para saber mais, acesse linx.com.br/imprensa.
-        </p>
+        <div><img src="./assets/images/linxLogo.svg" alt="Linx Logo" /></div>
+        <article>
+          <p>
+            A Linx é uma empresa brasileira especialista em tecnologia para o
+            varejo. Líder no mercado de software de gestão, com 45,6% de market
+            share do mercado varejista, conforme atesta o IDC.
+          </p>
+          <p>
+            Toda a expertise da Linx na jornada de compra é transformada em
+            insights fundamentais para atingir o que os varejistas mais esperam:
+            fidelizar seus consumidores e atingir resultados concretos e
+            relevantes.
+          </p>
+          <p>
+            Com capital aberto na B3 desde 2013, a Linx também se tornou a
+            primeira empresa brasileira de software com capital aberto na NYSE,
+            em 2019. A empresa possui mais de 3,5 mil colaboradores distribuídos
+            entre sua sede em São Paulo, 15 filiais pelo Brasil e 5 países da
+            América. Para saber mais, acesse linx.com.br/imprensa.
+          </p>
+        </article>
       </section>
     </main>
     <footer>

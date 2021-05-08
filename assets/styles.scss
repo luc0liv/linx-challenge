@@ -1,0 +1,280 @@
+$main-color: #422755;
+$secondary-color: #feaf3d;
+$background: #e5e5e5;
+$warning-color: #f04837;
+$main-text-color: #000000;
+$secondary-text-color: #414141;
+$third-text-color: #ffffff;
+$button-main-color: #6E4B87;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+header {
+  background: $main-color;
+  height: 381px;
+  width: 100vw;
+
+  nav {
+    position: relative;
+    top: 140px;
+    bottom: 139px;
+    text-align: center;
+
+    h1 {
+      color: $third-text-color;
+      font-family: "Open Sans", sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      padding-bottom: 28px;
+    }
+
+    h4 {
+      color: $third-text-color;
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+.taskFilter {
+  align-items: center;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 85px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 56px;
+  width: 1081px;
+
+  .searchTask {
+    input[type="search"] {
+      border: 0px;
+      border-radius: 8px;
+      width: 276px;
+      height: 34px;
+      padding-left: 15px;
+    }
+    button {
+      background-color: $button-main-color;
+      border: 0px;
+      border-radius: 8px;
+      color: $third-text-color;
+      cursor: pointer;
+      height: 34px;
+      margin-left: -34px;
+      width: 69px;
+    }
+  }
+
+  .filterTask {
+    label {
+      font: 14px "Open Sans", sans-serif;
+      color: $third-text-color;
+      margin-right: 18px;
+    }
+
+    #filter {
+      width: 193px;
+      height: 34px;
+      border-radius: 8px;
+      border: 0px;
+    }
+  }
+}
+
+.taskTable {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 23px;
+  grid-row-gap: 35px;
+  margin: 0 auto;
+  margin-top: 71px;
+  margin-bottom: 52px;
+  width: 1081px;
+  justify-content: center;
+
+  .taskCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $main-text-color;
+    border-radius: 14px;
+    max-height: 360px;
+    overflow: hidden;
+    width: 253px;
+    padding: 13px;
+    transition: ease-in-out 1s;
+
+    &:hover {
+      max-height: 466px;
+    }
+    img {
+      margin-top: 13px;
+    }
+    h4 {
+      color: $secondary-text-color;
+      font: 14px "Open Sans", sans-serif;
+      font-weight: 700;
+      margin-top: 8px;
+      margin-bottom: 5px;
+    }
+    p {
+      font: 12px "Open Sans", sans-serif;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+
+      span {
+        color: #f04837;
+        font-size: 18px;
+      }
+    }
+    small {
+      color: $secondary-text-color;
+      font: 10px 'Open Sans', sans-serif;
+    }
+    .extraButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 23px;
+
+      button {
+        border: 0px;
+        border-radius: 8px;
+        height: 40px;
+        text-align: center;
+        color: $third-text-color;
+        font: 16px "Open Sans", sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $main-color;
+        }
+
+        &:last-child {
+          align-items: center;
+          background-color: $warning-color;
+          display: flex;
+          justify-content: center;
+
+          img {
+            margin: 0px 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.seeMore {
+  background-color: #6E4B87;
+  border: 0;
+  border-radius: 8px;
+  color: $third-text-color;
+  cursor: pointer;
+  display: flex;
+  font: 16px 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width:197px;
+  height: 38px;
+
+}
+
+.newsletter {
+  background-color: #E5E5E5;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 138px;
+  padding: 23px 49px 21px 28px;
+  width: 876px;
+  height: 122px;
+
+  h4 {
+    color: $button-main-color;
+    font: 14px 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1%;
+
+    label {
+      color: $secondary-text-color;
+      font: 12px 'Open Sans', sans-serif;
+    }
+
+    input {
+      border: 0;
+      border-radius: 8px;
+      padding: 6px;
+      width: 335px;
+      height: 34px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      background-color: $button-main-color;
+      color: $third-text-color;
+      font: 14px 'Open Sans', sans-serif;
+      font-weight: 700;
+      width: 100px;
+      height: 34px;
+    }
+  }
+}
+
+.aboutLinx {
+  display: flex;
+  flex-direction: row;
+  gap: 54px;
+  justify-content: center;
+  margin-top: 107px;
+
+  article {
+    width: 699px;
+    height: 190px;
+
+    p {
+      text-align: start;
+      font: 14px 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: $secondary-text-color;
+      margin: 10px ;
+      line-height: 19px;
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .taskTable {
+    grid-template-columns: auto;
+    justify-content: flex-start;
+  }
+  .taskCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
