@@ -232,6 +232,23 @@ header nav h4 {
   line-height: 19px;
 }
 
+footer {
+  background-color: #422755;
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  margin-top: 48px;
+}
+footer p {
+  color: #ffffff;
+  font: 12px "Open Sans", sans-serif;
+  position: relative;
+  width: 253px;
+  margin: 0 auto;
+  top: 34px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 360px) {
   .taskTable {
     grid-template-columns: auto;
