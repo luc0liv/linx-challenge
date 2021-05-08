@@ -16,8 +16,9 @@ $button-main-color: #6E4B87;
 
 header {
   background: $main-color;
-  height: 381px;
-  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+  height: 23.813rem;
+  width: 100vw;
 
 
   nav {
@@ -49,11 +50,12 @@ header {
   border-radius: 8px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 85px;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 56px;
-  width: 1081px;
+  width: 80vw;
 
   .searchTask {
     input[type="search"] {
@@ -76,30 +78,70 @@ header {
   }
 
   .filterTask {
+
+    display: flex;
+    align-items: center;
+
     label {
       font: 14px "Open Sans", sans-serif;
       color: $third-text-color;
       margin-right: 18px;
     }
+    .select {
+    align-items: center;
+    display: grid;
+    width: 193px;
+    height: 34px;
+    border-radius: 8px;
+    padding-left: 25px;
+    padding-right: 12px;
+    font: 14px 'Open Sans', sans-serif;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    grid-template-areas: "select";
+
+    &::after {
+      content: "";
+      width: 1rem;
+      height: 0.625rem;
+      background-color: $secondary-text-color;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      grid-area: select;
+      justify-self: end;
+    }
 
     #filter {
-      width: 193px;
-      height: 34px;
-      border-radius: 8px;
-      border: 0px;
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
+      outline: none;
+      grid-area: select;
+
+      #filter::-ms-expand {
+        display: none;
+      }
+    }
     }
   }
 }
 
 .taskTable {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-column-gap: 23px;
-  grid-row-gap: 35px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.5vw;
+  grid-row-gap: 4vh;
   margin: 0 auto;
   margin-top: 71px;
   margin-bottom: 52px;
-  width: 1081px;
+  width: 80vw;
   justify-content: center;
 
   .taskCard {
@@ -203,19 +245,21 @@ header {
   margin: 0 auto;
   margin-top: 138px;
   padding: 23px 49px 21px 28px;
-  width: 876px;
-  height: 122px;
+  width: 70vw;
+  height: auto;
 
   h4 {
     color: $button-main-color;
     font: 14px 'Open Sans', sans-serif;
     font-weight: 700;
     text-align: start;
+    padding-right: 5%;
   }
 
   form {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-between;
     align-items: end;
@@ -224,13 +268,14 @@ header {
     label {
       color: $secondary-text-color;
       font: 12px 'Open Sans', sans-serif;
+      width: 100px;
     }
 
     input {
       border: 0;
       border-radius: 8px;
       padding: 6px;
-      width: 335px;
+      width: 27vw;
       height: 34px;
     }
 
@@ -250,13 +295,14 @@ header {
 .aboutLinx {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 54px;
   justify-content: center;
   margin-top: 107px;
+  margin-bottom: 100px;
 
   article {
-    width: 699px;
-    height: 190px;
+    width:60%;
 
     p {
       text-align: start;
@@ -271,10 +317,8 @@ header {
 
 footer {
   background-color: $main-color;
-  width: 100%;
+  width: 100vw;
   height: 20vh;
-  position: absolute;
-  margin-top: 48px;
 
   p {
   color: $third-text-color;
@@ -290,10 +334,34 @@ footer {
   .taskTable {
     grid-template-columns: auto;
     justify-content: flex-start;
+
+    .taskCard {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      width: 100%;
+
+      .taskImage {
+
+        object-fit: contain;
+
+        img {
+          width: 100px;
+        }
+      }
+
+    }
   }
-  .taskCard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+  .newsletter {
+    display: none;
+  }
+
+  .aboutLinx {
+   article {
+     width: 90%;
+     p {
+       text-align: center;
+     }
+   }
   }
 }

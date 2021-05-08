@@ -6,8 +6,9 @@
 
 header {
   background: #422755;
-  height: 381px;
-  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+  height: 23.813rem;
+  width: 100vw;
 }
 header nav {
   position: relative;
@@ -35,11 +36,12 @@ header nav h4 {
   border-radius: 8px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 85px;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 56px;
-  width: 1081px;
+  width: 80vw;
 }
 .taskFilter .searchTask input[type=search] {
   border: 0px;
@@ -58,27 +60,65 @@ header nav h4 {
   margin-left: -34px;
   width: 69px;
 }
+.taskFilter .filterTask {
+  display: flex;
+  align-items: center;
+}
 .taskFilter .filterTask label {
   font: 14px "Open Sans", sans-serif;
   color: #ffffff;
   margin-right: 18px;
 }
-.taskFilter .filterTask #filter {
+.taskFilter .filterTask .select {
+  align-items: center;
+  display: grid;
   width: 193px;
   height: 34px;
   border-radius: 8px;
-  border: 0px;
+  padding-left: 25px;
+  padding-right: 12px;
+  font: 14px "Open Sans", sans-serif;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  grid-template-areas: "select";
+}
+.taskFilter .filterTask .select::after {
+  content: "";
+  width: 1rem;
+  height: 0.625rem;
+  background-color: #414141;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  grid-area: select;
+  justify-self: end;
+}
+.taskFilter .filterTask .select #filter {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  grid-area: select;
+}
+.taskFilter .filterTask .select #filter #filter::-ms-expand {
+  display: none;
 }
 
 .taskTable {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-column-gap: 23px;
-  grid-row-gap: 35px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.5vw;
+  grid-row-gap: 4vh;
   margin: 0 auto;
   margin-top: 71px;
   margin-bottom: 52px;
-  width: 1081px;
+  width: 80vw;
   justify-content: center;
 }
 .taskTable .taskCard {
@@ -173,18 +213,20 @@ header nav h4 {
   margin: 0 auto;
   margin-top: 138px;
   padding: 23px 49px 21px 28px;
-  width: 876px;
-  height: 122px;
+  width: 70vw;
+  height: auto;
 }
 .newsletter h4 {
   color: #6E4B87;
   font: 14px "Open Sans", sans-serif;
   font-weight: 700;
   text-align: start;
+  padding-right: 5%;
 }
 .newsletter form {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
   align-items: end;
@@ -193,12 +235,13 @@ header nav h4 {
 .newsletter form label {
   color: #414141;
   font: 12px "Open Sans", sans-serif;
+  width: 100px;
 }
 .newsletter form input {
   border: 0;
   border-radius: 8px;
   padding: 6px;
-  width: 335px;
+  width: 27vw;
   height: 34px;
 }
 .newsletter form button {
@@ -215,13 +258,14 @@ header nav h4 {
 .aboutLinx {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 54px;
   justify-content: center;
   margin-top: 107px;
+  margin-bottom: 100px;
 }
 .aboutLinx article {
-  width: 699px;
-  height: 190px;
+  width: 60%;
 }
 .aboutLinx article p {
   text-align: start;
@@ -234,10 +278,8 @@ header nav h4 {
 
 footer {
   background-color: #422755;
-  width: 100%;
+  width: 100vw;
   height: 20vh;
-  position: absolute;
-  margin-top: 48px;
 }
 footer p {
   color: #ffffff;
@@ -254,11 +296,27 @@ footer p {
     grid-template-columns: auto;
     justify-content: flex-start;
   }
+  .taskTable .taskCard {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+  }
+  .taskTable .taskCard .taskImage {
+    object-fit: contain;
+  }
+  .taskTable .taskCard .taskImage img {
+    width: 100px;
+  }
 
-  .taskCard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .newsletter {
+    display: none;
+  }
+
+  .aboutLinx article {
+    width: 90%;
+  }
+  .aboutLinx article p {
+    text-align: center;
   }
 }
 
