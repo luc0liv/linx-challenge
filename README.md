@@ -1,6 +1,6 @@
-## Desafio | Webdesigner
+# Desafio | Webdesigner
 
-### Sobre o desafio
+## Sobre o desafio
 O desafio consiste no desenvolvimento de uma página responsiva com base nos layouts desktop e mobile fornecidos.
 
 ## Tecnologias utilizadas
