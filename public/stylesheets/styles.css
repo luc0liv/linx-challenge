@@ -48,70 +48,70 @@ header nav h4 {
   width: 80%;
 }
 .taskFilter .searchTask input[type=search] {
-  border: 0px;
   border-radius: 8px 0px 0px 8px;
-  width: 17.25rem;
+  border: 0px;
   height: 34px;
   padding-left: 15px;
+  width: 17.25rem;
 }
 .taskFilter .searchTask button {
   background-color: #6e4b87;
-  border: 0px;
   border-radius: 8px;
+  border: 0px;
   color: #ffffff;
   cursor: pointer;
-  font: 14px "Open Sans", sans-serif;
   font-weight: 700;
+  font: 14px "Open Sans", sans-serif;
   height: 36px;
   margin-left: -34px;
   width: 69px;
 }
 .taskFilter .filterTask {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .taskFilter .filterTask label {
-  font: 14px "Open Sans", sans-serif;
-  font-weight: 600;
   color: #ffffff;
+  font-weight: 600;
+  font: 14px "Open Sans", sans-serif;
   margin-right: 18px;
 }
 .taskFilter .filterTask .select {
   align-items: center;
-  display: grid;
-  width: 193px;
-  height: 34px;
-  border-radius: 8px;
-  padding-left: 25px;
-  padding-right: 12px;
-  font: 14px "Open Sans", sans-serif;
-  cursor: pointer;
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  font: 14px "Open Sans", sans-serif;
   grid-template-areas: "select";
+  height: 34px;
+  padding-left: 25px;
+  padding-right: 12px;
+  width: 193px;
 }
 .taskFilter .filterTask .select::after {
-  content: "";
-  width: 1rem;
-  height: 0.625rem;
   background-color: #414141;
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  content: "";
   grid-area: select;
+  height: 0.625rem;
   justify-self: end;
+  width: 1rem;
 }
 .taskFilter .filterTask .select #filter {
   appearance: none;
   background-color: transparent;
   border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
+  cursor: inherit;
   font-family: inherit;
   font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  outline: none;
   grid-area: select;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0 1em 0 0;
+  width: 100%;
 }
 .taskFilter .filterTask .select #filter #filter::-ms-expand {
   display: none;
@@ -129,16 +129,16 @@ header nav h4 {
   width: 100%;
 }
 .taskTable .taskCard {
+  border-radius: 14px;
+  border: 1px solid #000000;
   display: flex;
   flex-direction: column;
-  border: 1px solid #000000;
-  border-radius: 14px;
   max-height: 360px;
   overflow: hidden;
-  width: 253px;
   padding: 13px;
-  transition: ease-in-out 1s;
   position: relative;
+  transition: ease-in-out 1s;
+  width: 253px;
 }
 .taskTable .taskCard:hover {
   max-height: 466px;
@@ -147,28 +147,28 @@ header nav h4 {
   background: #422755;
   border-radius: 0px 8px 8px 0px;
   color: #ffffff;
-  font: 12px "Open Sans", sans-serif;
   font-weight: 700;
-  width: 102px;
-  text-align: center;
+  font: 12px "Open Sans", sans-serif;
+  left: -10px;
   padding: 5px 12px 5px 17px;
   position: absolute;
-  z-index: 1;
+  text-align: center;
   top: 25px;
-  left: -10px;
+  width: 102px;
+  z-index: 1;
 }
 .taskTable .taskCard .timeAlert2 {
   background: #f04837;
   border-radius: 0px 8px 8px 0px;
   color: #ffffff;
-  font: 12px "Open Sans", sans-serif;
   font-weight: 700;
-  width: 102px;
-  text-align: center;
+  font: 12px "Open Sans", sans-serif;
+  left: -10px;
   padding: 5px 12px 5px 17px;
   position: absolute;
+  text-align: center;
   top: 25px;
-  left: -10px;
+  width: 102px;
 }
 .taskTable .taskCard img {
   margin-top: 1px;
@@ -216,10 +216,10 @@ header nav h4 {
   font: 10px "Open Sans", sans-serif;
 }
 .taskTable .taskCard .delayedTask p {
-  height: 48px;
+  height: 50px;
 }
 .taskTable .taskCard .noTime {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 .taskTable .taskCard .extraButtons {
   display: flex;
@@ -228,14 +228,14 @@ header nav h4 {
   margin-top: 40px;
 }
 .taskTable .taskCard .extraButtons button {
-  border: 0px;
   border-radius: 8px;
+  border: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  font: 16px "Open Sans", sans-serif;
   height: 40px;
   text-align: center;
-  color: #ffffff;
-  font: 16px "Open Sans", sans-serif;
-  font-weight: 700;
-  cursor: pointer;
 }
 .taskTable .taskCard .extraButtons button:first-child {
   background-color: #422755;
@@ -251,19 +251,19 @@ header nav h4 {
 }
 
 .seeMore {
+  align-items: center;
   background-color: #6e4b87;
-  border: 0;
   border-radius: 8px;
+  border: 0;
   color: #ffffff;
   cursor: pointer;
   display: flex;
-  font: 16px "Open Sans", sans-serif;
   font-weight: 700;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  width: 197px;
+  font: 16px "Open Sans", sans-serif;
   height: 38px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 197px;
 }
 
 .newsletter {
@@ -283,12 +283,12 @@ header nav h4 {
   padding-right: 5%;
 }
 .newsletter form {
+  align-items: flex-end;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
   justify-content: space-between;
-  align-items: end;
+  margin: 0 auto;
   padding: 1%;
 }
 .newsletter form label {
@@ -320,28 +320,28 @@ header nav h4 {
   flex-wrap: wrap;
   gap: 54px;
   justify-content: center;
-  margin-top: 107px;
   margin-bottom: 100px;
+  margin-top: 107px;
 }
 .aboutLinx article {
   width: 60%;
 }
 .aboutLinx article p {
-  text-align: start;
-  font: 14px "Open Sans", sans-serif;
-  font-weight: 400;
   color: #414141;
-  margin: 10px;
+  font-weight: 400;
+  font: 14px "Open Sans", sans-serif;
   line-height: 19px;
+  margin: 10px;
+  text-align: start;
 }
 
 footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: #422755;
-  width: 100%;
+  display: flex;
   height: 20vh;
+  justify-content: center;
+  width: 100%;
 }
 footer div p {
   color: #ffffff;
@@ -368,16 +368,17 @@ footer div p {
   .hiddenDisclaimer {
     color: #422755;
     display: block;
-    margin: 0 auto;
-    margin-top: -120px;
-    font: 16px "Open Sans", sans-serif;
     font-weight: 400;
+    font: 16px "Open Sans", sans-serif;
+    margin: 0 auto;
     text-align: center;
     width: 272px;
+    position: relative;
+    top: -100px;
   }
 
   .taskFilter {
-    margin-top: 45px;
+    margin-top: -50px;
     width: 95%;
     height: 146px;
   }
@@ -390,16 +391,16 @@ footer div p {
 
   .taskTable {
     display: grid;
-    grid-template-columns: 95vw;
     gap: 24px;
+    grid-template-columns: 95vw;
     margin-top: 37px;
   }
   .taskTable .taskCard {
     align-items: center;
-    width: 100%;
-    height: 210px;
     display: flex;
     flex-direction: row;
+    height: 210px;
+    width: 100%;
   }
   .taskTable .taskCard:nth-child(n+5):nth-child(-n+8) {
     display: none;
@@ -413,8 +414,8 @@ footer div p {
     visibility: visible;
   }
   .taskTable .taskCard .conclusionBtn {
-    display: block;
     cursor: pointer;
+    display: block;
   }
   .taskTable .taskCard .extraButtons {
     display: none;
@@ -426,9 +427,9 @@ footer div p {
     height: 100%;
   }
   .taskTable .taskCard .taskImage img {
-    width: 120px;
-    object-fit: cover;
     margin-top: 0;
+    object-fit: cover;
+    width: 120px;
   }
   .taskTable .taskCard article {
     margin-left: 10px;
