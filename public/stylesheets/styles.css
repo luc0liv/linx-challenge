@@ -45,11 +45,11 @@ header nav h4 {
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 56px;
-  width: 72vw;
+  width: 80%;
 }
 .taskFilter .searchTask input[type=search] {
   border: 0px;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
   width: 17.25rem;
   height: 34px;
   padding-left: 15px;
@@ -60,7 +60,9 @@ header nav h4 {
   border-radius: 8px;
   color: #ffffff;
   cursor: pointer;
-  height: 34px;
+  font: 14px "Open Sans", sans-serif;
+  font-weight: 700;
+  height: 36px;
   margin-left: -34px;
   width: 69px;
 }
@@ -70,6 +72,7 @@ header nav h4 {
 }
 .taskFilter .filterTask label {
   font: 14px "Open Sans", sans-serif;
+  font-weight: 600;
   color: #ffffff;
   margin-right: 18px;
 }
@@ -116,14 +119,14 @@ header nav h4 {
 
 .taskTable {
   display: grid;
-  grid-template-columns: repeat(4, 253px);
-  grid-column-gap: 23px;
+  grid-column-gap: 25px;
   grid-row-gap: 35px;
-  margin: 0 auto;
-  margin-top: 71px;
-  margin-bottom: 52px;
-  width: 80vw;
+  grid-template-columns: repeat(4, 253px);
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 52px;
+  margin-top: 71px;
+  width: 100%;
 }
 .taskTable .taskCard {
   display: flex;
@@ -131,7 +134,7 @@ header nav h4 {
   border: 1px solid #000000;
   border-radius: 14px;
   max-height: 360px;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 253px;
   padding: 13px;
   transition: ease-in-out 1s;
@@ -168,13 +171,12 @@ header nav h4 {
   left: -10px;
 }
 .taskTable .taskCard img {
-  margin-top: 13px;
+  margin-top: 1px;
 }
 .taskTable .taskCard h4 {
   color: #414141;
   font: 14px "Open Sans", sans-serif;
   font-weight: 700;
-  margin-top: 8px;
   margin-bottom: 5px;
 }
 .taskTable .taskCard h4 img {
@@ -193,7 +195,10 @@ header nav h4 {
   color: #f04837;
   font-size: 18px;
 }
-.taskTable .taskCard button {
+.taskTable .taskCard h3 small {
+  color: #f04837;
+}
+.taskTable .taskCard .conclusionBtn {
   background-color: transparent;
   border: 1px solid #422755;
   border-radius: 8px;
@@ -210,11 +215,17 @@ header nav h4 {
   color: #414141;
   font: 10px "Open Sans", sans-serif;
 }
+.taskTable .taskCard .delayedTask p {
+  height: 48px;
+}
+.taskTable .taskCard .noTime {
+  margin-bottom: 25px;
+}
 .taskTable .taskCard .extraButtons {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: 23px;
+  margin-top: 40px;
 }
 .taskTable .taskCard .extraButtons button {
   border: 0px;
@@ -342,11 +353,13 @@ footer div p {
   header {
     background-color: #422755;
     clip-path: polygon(0 0, 100% 0, 100% 63%, 0 53%);
+    height: 360px;
   }
   header nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 70px;
   }
   header nav h4 {
     display: none;
@@ -356,7 +369,7 @@ footer div p {
     color: #422755;
     display: block;
     margin: 0 auto;
-    margin-top: -100px;
+    margin-top: -120px;
     font: 16px "Open Sans", sans-serif;
     font-weight: 400;
     text-align: center;
@@ -364,17 +377,22 @@ footer div p {
   }
 
   .taskFilter {
-    width: 90vw;
+    margin-top: 45px;
+    width: 95%;
     height: 146px;
   }
+  .taskFilter .searchTask input[type=search] {
+    width: 260px;
+  }
   .taskFilter .filterTask label {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .taskTable {
     display: grid;
-    grid-template-columns: 90vw;
+    grid-template-columns: 95vw;
     gap: 24px;
+    margin-top: 37px;
   }
   .taskTable .taskCard {
     align-items: center;
@@ -394,7 +412,7 @@ footer div p {
   .taskTable .taskCard article h4 img {
     visibility: visible;
   }
-  .taskTable .taskCard button {
+  .taskTable .taskCard .conclusionBtn {
     display: block;
     cursor: pointer;
   }
@@ -425,6 +443,23 @@ footer div p {
   }
   .aboutLinx article p {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 1040px) and (min-width: 815px) {
+  .taskTable {
+    display: grid;
+    grid-template-columns: repeat(3, 253px);
+  }
+}
+@media only screen and (max-width: 815px) and (min-width: 540px) {
+  .taskTable {
+    display: grid;
+    grid-template-columns: repeat(2, 253px);
+  }
+}
+@media only screen and (max-width: 540px) and (min-width: 361px) {
+  .taskTable {
+    grid-template-columns: 253px;
   }
 }
 
