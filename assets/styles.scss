@@ -73,8 +73,8 @@ header {
       border: 0px;
       color: $third-text-color;
       cursor: pointer;
+      font: 14px "Open Sans", sans-serif;
       font-weight: 700;
-      font: 14px 'Open Sans', sans-serif;
       height: 36px;
       margin-left: -34px;
       width: 69px;
@@ -87,8 +87,8 @@ header {
 
     label {
       color: $third-text-color;
-      font-weight: 600;
       font: 14px "Open Sans", sans-serif;
+      font-weight: 600;
       margin-right: 18px;
     }
     .select {
@@ -167,8 +167,8 @@ header {
       background: $main-color;
       border-radius: 0px 8px 8px 0px;
       color: $third-text-color;
-      font-weight: 700;
       font: 12px "Open Sans", sans-serif;
+      font-weight: 700;
       left: -10px;
       padding: 5px 12px 5px 17px;
       position: absolute;
@@ -181,8 +181,8 @@ header {
       background: $warning-color;
       border-radius: 0px 8px 8px 0px;
       color: $third-text-color;
-      font-weight: 700;
       font: 12px "Open Sans", sans-serif;
+      font-weight: 700;
       left: -10px;
       padding: 5px 12px 5px 17px;
       position: absolute;
@@ -223,17 +223,17 @@ header {
       }
     }
     .conclusionBtn {
-        background-color: transparent;
-        border: 1px solid $main-color;
-        border-radius: 8px;
-        color: $main-color;
-        display: none;
-        font: 16px 'Open Sans', sans-serif;
-        font-weight: 700;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        width: 155px;
-        height: 30px;
+      background-color: transparent;
+      border: 1px solid $main-color;
+      border-radius: 8px;
+      color: $main-color;
+      display: none;
+      font: 16px "Open Sans", sans-serif;
+      font-weight: 700;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      width: 155px;
+      height: 30px;
     }
     small {
       color: $secondary-text-color;
@@ -258,8 +258,8 @@ header {
         border: 0px;
         color: $third-text-color;
         cursor: pointer;
-        font-weight: 700;
         font: 16px "Open Sans", sans-serif;
+        font-weight: 700;
         height: 40px;
         text-align: center;
 
@@ -290,8 +290,8 @@ header {
   color: $third-text-color;
   cursor: pointer;
   display: flex;
-  font-weight: 700;
   font: 16px "Open Sans", sans-serif;
+  font-weight: 700;
   height: 38px;
   justify-content: center;
   margin: 0 auto;
@@ -316,7 +316,7 @@ header {
   }
 
   form {
-    align-items:flex-end;
+    align-items: flex-end;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -365,8 +365,8 @@ header {
 
     p {
       color: $secondary-text-color;
-      font-weight: 400;
       font: 14px "Open Sans", sans-serif;
+      font-weight: 400;
       line-height: 19px;
       margin: 10px;
       text-align: start;
@@ -410,8 +410,8 @@ footer {
   .hiddenDisclaimer {
     color: $main-color;
     display: block;
-    font-weight: 400;
     font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
     margin: 0 auto;
     text-align: center;
     width: 272px;
@@ -448,8 +448,7 @@ footer {
       height: 210px;
       width: 100%;
 
-
-      &:nth-child(n + 5):nth-child(-n + 8){
+      &:nth-child(n + 5):nth-child(-n + 8) {
         display: none;
       }
 
@@ -485,7 +484,6 @@ footer {
       }
       article {
         margin-left: 10px;
-
       }
     }
   }
@@ -493,7 +491,6 @@ footer {
     display: none;
   }
   .aboutLinx {
-
     article {
       width: 90%;
       p {
@@ -503,21 +500,21 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1040px) and (min-width:815px) {
+@media only screen and (max-width: 1040px) and (min-width: 815px) {
   .taskTable {
     display: grid;
     grid-template-columns: repeat(3, 253px);
   }
 }
 
-@media only screen and (max-width: 815px) and (min-width:540px) {
+@media only screen and (max-width: 815px) and (min-width: 540px) {
   .taskTable {
     display: grid;
     grid-template-columns: repeat(2, 253px);
   }
 }
 
-@media only screen and (max-width: 540px) and (min-width:361px) {
+@media only screen and (max-width: 540px) and (min-width: 361px) {
   .taskTable {
     grid-template-columns: 253px;
   }

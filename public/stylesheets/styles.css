@@ -60,8 +60,8 @@ header nav h4 {
   border: 0px;
   color: #ffffff;
   cursor: pointer;
-  font-weight: 700;
   font: 14px "Open Sans", sans-serif;
+  font-weight: 700;
   height: 36px;
   margin-left: -34px;
   width: 69px;
@@ -72,8 +72,8 @@ header nav h4 {
 }
 .taskFilter .filterTask label {
   color: #ffffff;
-  font-weight: 600;
   font: 14px "Open Sans", sans-serif;
+  font-weight: 600;
   margin-right: 18px;
 }
 .taskFilter .filterTask .select {
@@ -147,8 +147,8 @@ header nav h4 {
   background: #422755;
   border-radius: 0px 8px 8px 0px;
   color: #ffffff;
-  font-weight: 700;
   font: 12px "Open Sans", sans-serif;
+  font-weight: 700;
   left: -10px;
   padding: 5px 12px 5px 17px;
   position: absolute;
@@ -161,8 +161,8 @@ header nav h4 {
   background: #f04837;
   border-radius: 0px 8px 8px 0px;
   color: #ffffff;
-  font-weight: 700;
   font: 12px "Open Sans", sans-serif;
+  font-weight: 700;
   left: -10px;
   padding: 5px 12px 5px 17px;
   position: absolute;
@@ -232,8 +232,8 @@ header nav h4 {
   border: 0px;
   color: #ffffff;
   cursor: pointer;
-  font-weight: 700;
   font: 16px "Open Sans", sans-serif;
+  font-weight: 700;
   height: 40px;
   text-align: center;
 }
@@ -258,8 +258,8 @@ header nav h4 {
   color: #ffffff;
   cursor: pointer;
   display: flex;
-  font-weight: 700;
   font: 16px "Open Sans", sans-serif;
+  font-weight: 700;
   height: 38px;
   justify-content: center;
   margin: 0 auto;
@@ -328,8 +328,8 @@ header nav h4 {
 }
 .aboutLinx article p {
   color: #414141;
-  font-weight: 400;
   font: 14px "Open Sans", sans-serif;
+  font-weight: 400;
   line-height: 19px;
   margin: 10px;
   text-align: start;
@@ -368,8 +368,8 @@ footer div p {
   .hiddenDisclaimer {
     color: #422755;
     display: block;
-    font-weight: 400;
     font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
     margin: 0 auto;
     text-align: center;
     width: 272px;
