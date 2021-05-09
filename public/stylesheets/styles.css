@@ -8,7 +8,7 @@ header {
   background: #422755;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
   height: 23.813rem;
-  width: 100vw;
+  width: 100%;
 }
 header nav {
   position: relative;
@@ -30,6 +30,10 @@ header nav h4 {
   font-weight: 400;
 }
 
+.hiddenDisclaimer {
+  display: none;
+}
+
 .taskFilter {
   align-items: center;
   background-color: #feaf3d;
@@ -41,17 +45,17 @@ header nav h4 {
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 56px;
-  width: 80vw;
+  width: 72vw;
 }
 .taskFilter .searchTask input[type=search] {
   border: 0px;
   border-radius: 8px;
-  width: 276px;
+  width: 17.25rem;
   height: 34px;
   padding-left: 15px;
 }
 .taskFilter .searchTask button {
-  background-color: #6E4B87;
+  background-color: #6e4b87;
   border: 0px;
   border-radius: 8px;
   color: #ffffff;
@@ -112,9 +116,9 @@ header nav h4 {
 
 .taskTable {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1.5vw;
-  grid-row-gap: 4vh;
+  grid-template-columns: repeat(4, 253px);
+  grid-column-gap: 23px;
+  grid-row-gap: 35px;
   margin: 0 auto;
   margin-top: 71px;
   margin-bottom: 52px;
@@ -127,13 +131,41 @@ header nav h4 {
   border: 1px solid #000000;
   border-radius: 14px;
   max-height: 360px;
-  overflow: hidden;
+  overflow-y: hidden;
   width: 253px;
   padding: 13px;
   transition: ease-in-out 1s;
+  position: relative;
 }
 .taskTable .taskCard:hover {
   max-height: 466px;
+}
+.taskTable .taskCard .timeAlert1 {
+  background: #422755;
+  border-radius: 0px 8px 8px 0px;
+  color: #ffffff;
+  font: 12px "Open Sans", sans-serif;
+  font-weight: 700;
+  width: 102px;
+  text-align: center;
+  padding: 5px 12px 5px 17px;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: -10px;
+}
+.taskTable .taskCard .timeAlert2 {
+  background: #f04837;
+  border-radius: 0px 8px 8px 0px;
+  color: #ffffff;
+  font: 12px "Open Sans", sans-serif;
+  font-weight: 700;
+  width: 102px;
+  text-align: center;
+  padding: 5px 12px 5px 17px;
+  position: absolute;
+  top: 25px;
+  left: -10px;
 }
 .taskTable .taskCard img {
   margin-top: 13px;
@@ -144,6 +176,9 @@ header nav h4 {
   font-weight: 700;
   margin-top: 8px;
   margin-bottom: 5px;
+}
+.taskTable .taskCard h4 img {
+  visibility: hidden;
 }
 .taskTable .taskCard p {
   font: 12px "Open Sans", sans-serif;
@@ -157,6 +192,19 @@ header nav h4 {
 .taskTable .taskCard h3 span {
   color: #f04837;
   font-size: 18px;
+}
+.taskTable .taskCard button {
+  background-color: transparent;
+  border: 1px solid #422755;
+  border-radius: 8px;
+  color: #422755;
+  display: none;
+  font: 16px "Open Sans", sans-serif;
+  font-weight: 700;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 155px;
+  height: 30px;
 }
 .taskTable .taskCard small {
   color: #414141;
@@ -192,7 +240,7 @@ header nav h4 {
 }
 
 .seeMore {
-  background-color: #6E4B87;
+  background-color: #6e4b87;
   border: 0;
   border-radius: 8px;
   color: #ffffff;
@@ -208,7 +256,7 @@ header nav h4 {
 }
 
 .newsletter {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-radius: 8px;
   margin: 0 auto;
   margin-top: 138px;
@@ -217,7 +265,7 @@ header nav h4 {
   height: auto;
 }
 .newsletter h4 {
-  color: #6E4B87;
+  color: #6e4b87;
   font: 14px "Open Sans", sans-serif;
   font-weight: 700;
   text-align: start;
@@ -247,7 +295,7 @@ header nav h4 {
 .newsletter form button {
   border: 0;
   border-radius: 8px;
-  background-color: #6E4B87;
+  background-color: #6e4b87;
   color: #ffffff;
   font: 14px "Open Sans", sans-serif;
   font-weight: 700;
@@ -277,35 +325,95 @@ header nav h4 {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #422755;
-  width: 100vw;
+  width: 100%;
   height: 20vh;
 }
-footer p {
+footer div p {
   color: #ffffff;
   font: 12px "Open Sans", sans-serif;
-  position: relative;
-  width: 253px;
-  margin: 0 auto;
-  top: 34px;
   text-align: center;
 }
 
 @media only screen and (max-width: 360px) {
+  header {
+    background-color: #422755;
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0 53%);
+  }
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav h4 {
+    display: none;
+  }
+
+  .hiddenDisclaimer {
+    color: #422755;
+    display: block;
+    margin: 0 auto;
+    margin-top: -100px;
+    font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 272px;
+  }
+
+  .taskFilter {
+    width: 90vw;
+    height: 146px;
+  }
+  .taskFilter .filterTask label {
+    margin-right: 20px;
+  }
+
   .taskTable {
-    grid-template-columns: auto;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 90vw;
+    gap: 24px;
   }
   .taskTable .taskCard {
-    display: grid;
-    grid-template-columns: 30% 70%;
+    align-items: center;
     width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: row;
+  }
+  .taskTable .taskCard:nth-child(n+5):nth-child(-n+8) {
+    display: none;
+  }
+  .taskTable .taskCard article h4 {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+  }
+  .taskTable .taskCard article h4 img {
+    visibility: visible;
+  }
+  .taskTable .taskCard button {
+    display: block;
+    cursor: pointer;
+  }
+  .taskTable .taskCard .extraButtons {
+    display: none;
   }
   .taskTable .taskCard .taskImage {
-    object-fit: contain;
+    display: flex;
+    flex-grow: 1;
+    width: 60%;
+    height: 100%;
   }
   .taskTable .taskCard .taskImage img {
-    width: 100px;
+    width: 120px;
+    object-fit: cover;
+    margin-top: 0;
+  }
+  .taskTable .taskCard article {
+    margin-left: 10px;
   }
 
   .newsletter {

@@ -5,21 +5,19 @@ $warning-color: #f04837;
 $main-text-color: #000000;
 $secondary-text-color: #414141;
 $third-text-color: #ffffff;
-$button-main-color: #6E4B87;
+$button-main-color: #6e4b87;
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 header {
   background: $main-color;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
   height: 23.813rem;
-  width: 100vw;
-
+  width: 100%;
 
   nav {
     position: relative;
@@ -44,6 +42,10 @@ header {
   }
 }
 
+.hiddenDisclaimer {
+  display: none;
+}
+
 .taskFilter {
   align-items: center;
   background-color: $secondary-color;
@@ -55,13 +57,13 @@ header {
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 56px;
-  width: 80vw;
+  width: 72vw;
 
   .searchTask {
     input[type="search"] {
       border: 0px;
       border-radius: 8px;
-      width: 276px;
+      width: 17.25rem;
       height: 34px;
       padding-left: 15px;
     }
@@ -78,7 +80,6 @@ header {
   }
 
   .filterTask {
-
     display: flex;
     align-items: center;
 
@@ -88,56 +89,56 @@ header {
       margin-right: 18px;
     }
     .select {
-    align-items: center;
-    display: grid;
-    width: 193px;
-    height: 34px;
-    border-radius: 8px;
-    padding-left: 25px;
-    padding-right: 12px;
-    font: 14px 'Open Sans', sans-serif;
-    cursor: pointer;
-    background-color: #fff;
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-    grid-template-areas: "select";
+      align-items: center;
+      display: grid;
+      width: 193px;
+      height: 34px;
+      border-radius: 8px;
+      padding-left: 25px;
+      padding-right: 12px;
+      font: 14px "Open Sans", sans-serif;
+      cursor: pointer;
+      background-color: #fff;
+      background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+      grid-template-areas: "select";
 
-    &::after {
-      content: "";
-      width: 1rem;
-      height: 0.625rem;
-      background-color: $secondary-text-color;
-      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-      grid-area: select;
-      justify-self: end;
-    }
-
-    #filter {
-      appearance: none;
-      background-color: transparent;
-      border: none;
-      padding: 0 1em 0 0;
-      margin: 0;
-      width: 100%;
-      font-family: inherit;
-      font-size: inherit;
-      cursor: inherit;
-      line-height: inherit;
-      outline: none;
-      grid-area: select;
-
-      #filter::-ms-expand {
-        display: none;
+      &::after {
+        content: "";
+        width: 1rem;
+        height: 0.625rem;
+        background-color: $secondary-text-color;
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        grid-area: select;
+        justify-self: end;
       }
-    }
+
+      #filter {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        outline: none;
+        grid-area: select;
+
+        #filter::-ms-expand {
+          display: none;
+        }
+      }
     }
   }
 }
 
 .taskTable {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1.5vw;
-  grid-row-gap: 4vh;
+  grid-template-columns: repeat(4, 253px);
+  grid-column-gap: 23px;
+  grid-row-gap: 35px;
   margin: 0 auto;
   margin-top: 71px;
   margin-bottom: 52px;
@@ -150,13 +151,41 @@ header {
     border: 1px solid $main-text-color;
     border-radius: 14px;
     max-height: 360px;
-    overflow: hidden;
+    overflow-y: hidden;
     width: 253px;
     padding: 13px;
     transition: ease-in-out 1s;
+    position: relative;
 
     &:hover {
       max-height: 466px;
+    }
+    .timeAlert1 {
+      background: $main-color;
+      border-radius: 0px 8px 8px 0px;
+      color: $third-text-color;
+      font: 12px "Open Sans", sans-serif;
+      font-weight: 700;
+      width: 102px;
+      text-align: center;
+      padding: 5px 12px 5px 17px;
+      position: absolute;
+      z-index: 1;
+      top: 25px;
+      left: -10px;
+    }
+    .timeAlert2 {
+      background: $warning-color;
+      border-radius: 0px 8px 8px 0px;
+      color: $third-text-color;
+      font: 12px "Open Sans", sans-serif;
+      font-weight: 700;
+      width: 102px;
+      text-align: center;
+      padding: 5px 12px 5px 17px;
+      position: absolute;
+      top: 25px;
+      left: -10px;
     }
     img {
       margin-top: 13px;
@@ -167,6 +196,10 @@ header {
       font-weight: 700;
       margin-top: 8px;
       margin-bottom: 5px;
+
+      img {
+        visibility: hidden;
+      }
     }
     p {
       font: 12px "Open Sans", sans-serif;
@@ -183,9 +216,22 @@ header {
         font-size: 18px;
       }
     }
+    button {
+      background-color: transparent;
+      border: 1px solid $main-color;
+      border-radius: 8px;
+      color: $main-color;
+      display: none;
+      font: 16px 'Open Sans', sans-serif;
+      font-weight: 700;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      width: 155px;
+      height: 30px;
+    }
     small {
       color: $secondary-text-color;
-      font: 10px 'Open Sans', sans-serif;
+      font: 10px "Open Sans", sans-serif;
     }
     .extraButtons {
       display: flex;
@@ -223,24 +269,23 @@ header {
 }
 
 .seeMore {
-  background-color: #6E4B87;
+  background-color: #6e4b87;
   border: 0;
   border-radius: 8px;
   color: $third-text-color;
   cursor: pointer;
   display: flex;
-  font: 16px 'Open Sans', sans-serif;
+  font: 16px "Open Sans", sans-serif;
   font-weight: 700;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  width:197px;
+  width: 197px;
   height: 38px;
-
 }
 
 .newsletter {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border-radius: 8px;
   margin: 0 auto;
   margin-top: 138px;
@@ -250,7 +295,7 @@ header {
 
   h4 {
     color: $button-main-color;
-    font: 14px 'Open Sans', sans-serif;
+    font: 14px "Open Sans", sans-serif;
     font-weight: 700;
     text-align: start;
     padding-right: 5%;
@@ -267,7 +312,7 @@ header {
 
     label {
       color: $secondary-text-color;
-      font: 12px 'Open Sans', sans-serif;
+      font: 12px "Open Sans", sans-serif;
       width: 100px;
     }
 
@@ -284,7 +329,7 @@ header {
       border-radius: 8px;
       background-color: $button-main-color;
       color: $third-text-color;
-      font: 14px 'Open Sans', sans-serif;
+      font: 14px "Open Sans", sans-serif;
       font-weight: 700;
       width: 100px;
       height: 34px;
@@ -302,53 +347,121 @@ header {
   margin-bottom: 100px;
 
   article {
-    width:60%;
+    width: 60%;
 
     p {
       text-align: start;
-      font: 14px 'Open Sans', sans-serif;
+      font: 14px "Open Sans", sans-serif;
       font-weight: 400;
       color: $secondary-text-color;
-      margin: 10px ;
+      margin: 10px;
       line-height: 19px;
     }
   }
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $main-color;
-  width: 100vw;
+  width: 100%;
   height: 20vh;
 
-  p {
-  color: $third-text-color;
-  font: 12px 'Open Sans', sans-serif;
-  position: relative;
-  width: 253px;
-  margin: 0 auto;
-  top: 34px;
-  text-align: center;
+  div {
+    p {
+      color: $third-text-color;
+      font: 12px "Open Sans", sans-serif;
+      text-align: center;
+    }
   }
 }
 @media only screen and (max-width: 360px) {
+  header {
+    background-color: $main-color;
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0 53%);
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        display: none;
+      }
+    }
+  }
+  .hiddenDisclaimer {
+    color: $main-color;
+    display: block;
+    margin: 0 auto;
+    margin-top: -100px;
+    font: 16px "Open Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 272px;
+  }
+  .taskFilter {
+    width: 90vw;
+    height: 146px;
+
+    .filterTask {
+      label {
+        margin-right: 20px;
+      }
+    }
+  }
   .taskTable {
-    grid-template-columns: auto;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 90vw;
+    gap: 24px;
 
     .taskCard {
-      display: grid;
-      grid-template-columns: 30% 70%;
+      align-items: center;
       width: 100%;
+      height: 210px;
+      display: flex;
+      flex-direction: row;
 
-      .taskImage {
 
-        object-fit: contain;
-
-        img {
-          width: 100px;
-        }
+      &:nth-child(n + 5):nth-child(-n + 8){
+        display: none;
       }
 
+      article {
+        h4 {
+          align-items: end;
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            visibility: visible;
+          }
+        }
+      }
+      button {
+        display: block;
+        cursor: pointer;
+      }
+      .extraButtons {
+        display: none;
+      }
+      .taskImage {
+        display: flex;
+        flex-grow: 1;
+        width: 60%;
+        height: 100%;
+
+        img {
+          width: 120px;
+          object-fit: cover;
+          margin-top: 0;
+        }
+      }
+      article {
+        margin-left: 10px;
+
+      }
     }
   }
 
@@ -357,11 +470,11 @@ footer {
   }
 
   .aboutLinx {
-   article {
-     width: 90%;
-     p {
-       text-align: center;
-     }
-   }
+    article {
+      width: 90%;
+      p {
+        text-align: center;
+      }
+    }
   }
 }
