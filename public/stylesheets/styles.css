@@ -462,6 +462,10 @@ footer div p {
   .taskTable {
     grid-template-columns: 253px;
   }
+
+  .taskFilter {
+    min-width: 344px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
